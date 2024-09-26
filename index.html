@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TempTracker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="contenedor" id="contenedor">
+      <div class="buscador">
+        <input
+          type="text"
+          id="input-ciudad"
+          placeholder="Ingresa nombre de la ciudad"
+        />
+        <button id="boton-buscar"><i class="ri-search-line"></i></button>
+        <button id="boton-ubicacion"><i class="ri-map-pin-line"></i></button>
+      </div>
+
+      <div class="loading-spinner" id="loading-spinner" style="display: none">
+        <i class="ri-loader-4-line ri-spin"></i>
+      </div>
+
+      <div class="clima-info" id="clima-info">
+        <h3 id="condicion">Condición del clima</h3>
+        <div class="temp">
+          <img id="icono-clima" src="" alt="Icono del clima" />
+          <h1 id="temperatura">--°C</h1>
+          <p id="ciudad">Ciudad</p>
+        </div>
+        <div class="detalles-clima">
+          <div class="detalle-item">
+            <i class="ri-drop-line"></i>
+            <p id="humedad">--%</p>
+            <p>Humedad</p>
+          </div>
+          <div class="detalle-item">
+            <i class="ri-windy-line"></i>
+            <p id="viento">-- km/h</p>
+            <p>Viento</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="forecast"></div>
+
+      <div id="weather-alerts"></div>
+      <div id="historico-clima"></div>
+      <div id="mapa-meteorologico"></div>
+
+      <label class="switch">
+        <input type="checkbox" id="toggle-theme" />
+        <span class="slider">
+          <i class="ri-sun-line" id="theme-icon"></i>
+        </span>
+      </label>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
